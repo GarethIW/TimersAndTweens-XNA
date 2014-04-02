@@ -172,6 +172,21 @@ namespace TimersAndTweens
         private static float DoQuinticEaseOut(float progress) { return EaseOutPower(progress, 5); }
         private static float DoQuinticEaseInOut(float progress) { return EaseInOutPower(progress, 5); }
 
+        private static float DoSineEaseIn(float progress)
+        {
+            return (float)Math.Sin(progress * MathHelper.PiOver2 - MathHelper.PiOver2) + 1;
+        }
+
+        private static float DoSineEaseOut(float progress)
+        {
+            return (float)Math.Sin(progress * MathHelper.PiOver2);
+        }
+
+        private static float DoSineEaseInOut(float progress)
+        {
+            return (float)(Math.Sin(progress * MathHelper.Pi - MathHelper.PiOver2) + 1) / 2;
+        }
+
         private static float DoBounce(float progress)
         {
             if ((progress /= 1f) < (1f / 2.75f))
@@ -220,21 +235,5 @@ namespace TimersAndTweens
             }
         }
 
-        
-
-        private static float DoSineEaseIn(float progress)
-        {
-            return (float)Math.Sin(progress * MathHelper.PiOver2 - MathHelper.PiOver2) + 1;
-        }
-
-        private static float DoSineEaseOut(float progress)
-        {
-            return (float)Math.Sin(progress * MathHelper.PiOver2);
-        }
-
-        private static float DoSineEaseInOut(float progress)
-        {
-            return (float)(Math.Sin(progress * MathHelper.Pi - MathHelper.PiOver2) + 1) / 2;
-        }
     }
 }
