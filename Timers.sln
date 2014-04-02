@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timers", "Timers\Timers\Timers.csproj", "{4A849F3B-F2F7-4AAA-9972-B2650AEBF05E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimersAndTweens", "Timers\Timers\TimersAndTweens.csproj", "{4A849F3B-F2F7-4AAA-9972-B2650AEBF05E}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "TimersContent", "Timers\TimersContent\TimersContent.contentproj", "{9135D1E7-F932-4087-8B49-1410040A55EF}"
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "TimersAndTweensContent", "Timers\TimersContent\TimersAndTweensContent.contentproj", "{9135D1E7-F932-4087-8B49-1410040A55EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
 using System;
 
-namespace Timers
+namespace TimersAndTweens
 {
 #if WINDOWS || XBOX
     static class Program

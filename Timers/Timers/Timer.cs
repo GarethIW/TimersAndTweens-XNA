@@ -5,7 +5,7 @@ using System.Security.Policy;
 using System.Text;
 using Microsoft.Xna.Framework;
 
-namespace Timers
+namespace TimersAndTweens
 {
     enum TimerState
     {
