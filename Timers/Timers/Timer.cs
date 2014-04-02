@@ -37,6 +37,8 @@ namespace Timers
 
         public void Update(GameTime gameTime)
         {
+            if(State!=TimerState.Running) return;
+
             CurrentTime += gameTime.ElapsedGameTime.TotalMilliseconds;
             if (CurrentTime >= TargetTime)
             {
