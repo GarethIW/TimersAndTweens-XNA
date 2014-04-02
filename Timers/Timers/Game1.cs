@@ -43,14 +43,15 @@ namespace TimersAndTweens
             // Change background colour every second
             timerController.Create("bgcolor", () => { _bgColor = new Color(rand.Next(256), rand.Next(256), rand.Next(256)); }, 1000, true);
 
-            for(int i=0;i<5;i++)
+            for(int i=0;i<6;i++)
                 squares.Add(new Vector2(0, 100 + (i*60)));
 
-            tweenController.Create("linear", TweenFuncs.Linear, (tween) => { squares[0] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[0].Y); }, 1000, false, true, TweenDirection.Forward);
-            tweenController.Create("quadraticin", TweenFuncs.QuadraticEaseIn, (tween) => { squares[1] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[1].Y); }, 1000, true, true, TweenDirection.Forward);
-            tweenController.Create("quadraticout", TweenFuncs.QuadraticEaseOut, (tween) => { squares[2] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[2].Y); }, 1000, true, true, TweenDirection.Forward);
-            tweenController.Create("quadraticinout", TweenFuncs.QuadraticEaseInOut, (tween) => { squares[3] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[3].Y); }, 1000, true, true, TweenDirection.Forward);
-            tweenController.Create("bounce", TweenFuncs.Bounce, (tween) => { squares[4] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[4].Y); }, 1000, true, true, TweenDirection.Forward);
+            tweenController.Create("linear", TweenFuncs.Linear, (tween) => { squares[0] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[0].Y); }, 2000, true, true, TweenDirection.Forward);
+            tweenController.Create("quadraticin", TweenFuncs.QuadraticEaseIn, (tween) => { squares[1] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[1].Y); }, 2000, true, true, TweenDirection.Forward);
+            tweenController.Create("quadraticout", TweenFuncs.QuadraticEaseOut, (tween) => { squares[2] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[2].Y); }, 2000, true, true, TweenDirection.Forward);
+            tweenController.Create("quadraticinout", TweenFuncs.QuadraticEaseInOut, (tween) => { squares[3] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[3].Y); }, 2000, true, true, TweenDirection.Forward);
+            tweenController.Create("bounce", TweenFuncs.Bounce, (tween) => { squares[4] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[4].Y); }, 2000, true, true, TweenDirection.Forward);
+            tweenController.Create("elastic", TweenFuncs.Elastic, (tween) => { squares[5] = new Vector2((GraphicsDevice.Viewport.Width - 50) * tween.Value, squares[5].Y); }, 2000, true, true, TweenDirection.Forward);
         }
 
         protected override void Update(GameTime gameTime)

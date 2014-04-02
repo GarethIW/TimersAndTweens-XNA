@@ -156,6 +156,7 @@ namespace TimersAndTweens
         public static readonly TweenFunc SineEaseOut = DoSineEaseOut;
         public static readonly TweenFunc SineEaseInOut = DoSineEaseInOut;
         public static readonly TweenFunc Bounce = DoBounce;
+        public static readonly TweenFunc Elastic = DoElastic;
 
         private static float DoLinear(float progress) { return progress; }
         private static float DoQuadraticEaseIn(float progress) { return EaseInPower(progress, 2); }
@@ -181,6 +182,17 @@ namespace TimersAndTweens
                 return (7.5625f * (progress -= (2.25f / 2.75f)) * progress + .9375f);
             else
                 return (7.5625f * (progress -= (2.625f / 2.75f)) * progress + .984375f);
+        }
+
+        public static float DoElastic(float progress)
+        {
+            if ((progress /= 1f) == 1)
+                return 1f;
+
+            float p = 0.3f;
+            float s = p / 4f;
+
+            return (1f * (float)Math.Pow(2f, -10f * progress) * (float)Math.Sin((progress * 1f - s) * (2f * (float)Math.PI) / p) + 1f);
         }
 
         private static float EaseInPower(float progress, int power)
