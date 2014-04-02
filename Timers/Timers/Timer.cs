@@ -60,6 +60,11 @@ namespace TimersAndTweens
             State = TimerState.Running;
         }
 
+        public void Reset()
+        {
+            CurrentTime = 0;
+        }
+
         public void Kill()
         {
             State = TimerState.Finished;
